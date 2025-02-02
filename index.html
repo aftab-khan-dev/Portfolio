@@ -1,0 +1,2033 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from themesdesign.in/harold/layout/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Dec 2024 15:55:47 GMT -->
+  <head>
+    <meta charset="utf-8" />
+    <title>Harold - Landing Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content=" " />
+    <meta name="keywords" content="" />
+    <meta content="Themesdesign" name="author" />
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
+    <!-- Bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="css/bootstrap.min.css"
+      type="text/css"
+      id="bootstrap-style"
+    />
+
+    <!-- Material Icon Css -->
+    <link
+      rel="stylesheet"
+      href="css/materialdesignicons.min.css"
+      type="text/css"
+    />
+
+    <!-- Unicon Css -->
+    <link
+      rel="stylesheet"
+      href="../../../unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="css/tiny-slider.css" type="text/css" />
+    <link rel="stylesheet" href="css/tiny-slider.css.html" type="text/css" />
+    <link rel="stylesheet" href="css/swiper.min.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="css/style.min.css" type="text/css" />
+
+    <style>
+      /* Custom styles for the experience timeline */
+      .experience-item {
+        padding-left: 2rem;
+        border-left: 2px solid #e9ecef;
+        margin-left: 1rem;
+      }
+
+      .timeline-marker {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #0d6efd;
+        position: absolute;
+        left: 0;
+        margin-left: -8px;
+        border: 2px solid #fff;
+        box-shadow: 0 0 0 2px #0d6efd;
+      }
+
+      .experience-content {
+        padding-left: 1.5rem;
+      }
+
+      .company {
+        color: #0d6efd;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .position {
+        font-weight: 500;
+        color: #212529;
+      }
+
+      .duration {
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .description {
+        font-size: 0.875rem;
+        line-height: 1.5;
+      }
+
+      .skill-icon {
+        font-size: 1.5rem;
+        width: 2rem;
+        text-align: center;
+      }
+
+      .bg-purple {
+        background-color: #7952b3;
+      }
+
+      .progress {
+        background-color: #e9ecef;
+        border-radius: 0.25rem;
+        overflow: hidden;
+      }
+
+      .progress-bar {
+        transition: width 0.6s ease;
+      }
+
+      .skill-item:hover .progress-bar {
+        opacity: 0.9;
+      }
+
+      .skill-item {
+        transition: all 0.3s ease;
+      }
+
+      .skill-item:hover {
+        transform: translateX(5px);
+      }
+      /* Work Section Styles */
+      .my-work {
+        padding: 80px 0;
+      }
+
+      .work-item {
+        padding: 15px;
+      }
+
+      .work-image {
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .work-image img {
+        height: 300px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .work-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.8) 0%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        padding: 30px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .work-content {
+        transform: translateY(20px);
+        transition: transform 0.3s ease;
+      }
+
+      .work-image:hover .work-overlay {
+        opacity: 1;
+      }
+
+      .work-image:hover .work-content {
+        transform: translateY(0);
+      }
+
+      .work-image:hover img {
+        transform: scale(1.05);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .work-item {
+          padding: 10px;
+        }
+
+        .work-image img {
+          height: 250px;
+        }
+
+        .work-overlay {
+          padding: 20px;
+        }
+      }
+
+      /* Slider customization - assuming you're using a slider library like Slick */
+      .work-slider {
+        margin: 0 -15px;
+      }
+
+      .work-slider .slick-slide {
+        padding: 0 15px;
+      }
+
+      .work-slider .slick-dots {
+        margin-top: 20px;
+      }
+      .dark-mode #service {
+  background-color: #222 !important; /* Dark background */
+  color: #fff !important; /* White text */
+}
+
+.dark-mode #service p,
+.dark-mode #service h6,
+.dark-mode #service h2 {
+  color: #fff !important; /* Force text to change */
+}
+
+/* Fix Icons */
+.dark-mode .mdi {
+  color: #fff !important;
+  fill: currentColor !important;
+}
+
+    </style>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/uicons/2.0.0/css/uicons.css"
+  />
+  
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="71">
+    <!-- light-dark mode button -->
+    <a
+      href="javascript: void(0);"
+      id="mode"
+      class="mode-btn text-white rounded-end"
+    >
+    <i class="mode-dark mx-auto">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </i>
+      
+      <i class="bx-spin mode-light">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 6 6 0 0 0 21 12.79z"></path>
+        </svg>
+      </i>
+      
+    </a>
+
+    <!--Navbar Start-->
+    <nav class="navbar navbar-expand-lg fixed-top sticky" id="navbar">
+      <div class="container-fluid custom-container">
+        <a class="navbar-brand logo text-uppercase" href="index.html">
+          <!-- <img src="images/logo-light.png" class="logo-light" alt="" height="34"> -->
+          <!-- <img src="images/logo-dark.png" class="logo-dark" alt="" height="34"> -->
+        </a>
+
+        <button
+          class="navbar-toggler me-3 order-2 ms-4"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-label="Toggle navigation"
+        >
+          <i class="mdi mdi-menu"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ms-auto navbar-center">
+            <li class="nav-item active">
+              <a href="#home" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item dropdown dropdown-hover">
+              <a href="#aboutme" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item dropdown dropdown-hover">
+              <a href="#services" class="nav-link">Service</a>
+            </li>
+
+            <li class="nav-item dropdown dropdown-hover">
+              <a href="#work" class="nav-link">Work</a>
+            </li>
+            <li class="nav-item">
+              <a href="#testi" class="nav-link">Testimonial</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+          <!--end navbar-nav-->
+          <div class="ms-auto ps-2 ps-lg-0">
+            <!-- <a href="#" class="btn btn-dark rounded-pill my-3 my-lg-0" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a> -->
+          </div>
+        </div>
+      </div>
+      <!--end container-->
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Sign up</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-4">
+            <form class="row g-3 needs-validation">
+              <div class="col-md-6">
+                <label for="validationCustom01" class="form-label"
+                  >First name <span class="text-primary">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validationCustom01"
+                  value=""
+                  required
+                />
+                <div class="valid-feedback">Looks good!</div>
+              </div>
+              <div class="col-md-6">
+                <label for="validationCustom02" class="form-label"
+                  >Email <span class="text-primary">*</span></label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="validationCustom02"
+                  value=""
+                  required
+                />
+                <div class="valid-feedback">Looks good!</div>
+              </div>
+              <div class="col-md-6">
+                <label for="validationCustom03" class="form-label"
+                  >Subject <span class="text-primary">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validationCustom03"
+                  required
+                />
+                <div class="invalid-feedback">Please provide a valid city.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="validationCustom05" class="form-label"
+                  >Password <span class="text-primary">*</span></label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="validationCustom05"
+                  required
+                />
+                <div class="invalid-feedback">Please provide a valid zip.</div>
+              </div>
+              <div class="col-lg-12">
+                <label for="validationTextarea" class="form-label"
+                  >Textarea<span class="text-primary">*</span></label
+                >
+                <textarea
+                  class="form-control"
+                  id="validationTextarea"
+                  required
+                ></textarea>
+                <div class="invalid-feedback">
+                  You must agree before submitting.
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary" type="submit">
+                  Submit form
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal -->
+
+    <!-- home section -->
+    <section
+      class="home"
+      id="home"
+      style="background-image: url(images/bg-home.png)"
+    >
+      <!-- start container -->
+      <div class="container position-relative">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="home-slider" id="home-slider">
+              <!-- slider item -->
+              <div class="item">
+                <div class="row align-items-center">
+                  <div class="col-lg-6">
+                    <div class="content-item">
+                      <p class="text-danger fw-semibold mb-0">Hello! I AM</p>
+                      <div class="home-title mb-0 text-dark fw-bold h1">
+                        <span
+                          class="typewrite"
+                          data-period="2000"
+                          data-type='[ "Aftab Ahmad.","MERN Stack Developer.","Graduate based in Multan." ]'
+                        >
+                          <span class="wrap text-dark"></span>
+                        </span>
+                      </div>
+                      <p class="mt-3 text-muted">
+                        Building simple and beautiful things for complex
+                        interfaces is what I enjoy most about my work. I am also
+                        interested in crafting beautiful minimal products and
+                        exploring new worlds.
+                      </p>
+
+                      <div class="icon-item mt-4">
+                        <div class="d-flex">
+                          <a href="https://www.facebook.com/share/18niSVdmrB/">
+                            <div class="social-icon facebook avatar-sm">
+                              <i class="mdi mdi-facebook"></i>
+                            </div>
+                          </a>
+                          <a
+                            href="https://www.instagram.com/im_unchosen/profilecard/?igsh=eXk0dmVmeDM0dHp5"
+                          >
+                            <div class="social-icon instagram avatar-sm">
+                              <i class="mdi mdi-instagram"></i>
+                            </div>
+                          </a>
+                          <a href="www.linkedin.com/in/aftab-ahmad-b381a1293">
+                            <div class="social-icon linkedin avatar-sm">
+                              <i class="mdi mdi-linkedin"></i>
+                            </div>
+                          </a>
+                          <a href="https://github.com/aftab-khan-dev/">
+                            <div class="social-icon pinterest avatar-sm">
+                              <i class="mdi mdi-github"></i>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="home-link d-flex align-items-center mt-5">
+                        <div class="btn-link">
+                          <a href="#work" class="text-dark h6">
+                            <div class="read-link">
+                              <span>See my work </span>
+                            </div>
+                          </a>
+                        </div>
+                        <div class="btn-link-icon">
+                          <img
+                            src="images/home/right-arrow.png"
+                            alt=""
+                            class="img-fluid ms-3"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <div class="my-image">
+                      <img
+                        src="images/home/avatar.png"
+                        alt=""
+                        height="500px"
+                        class=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end container -->
+    </section>
+    <!-- end home section -->
+
+    <!-- about-me section -->
+    <!-- about-me section -->
+    <section class="section about-me" id="aboutme">
+      <div class="container">
+        <div class="about-box">
+          <div class="row">
+            <!-- <div class="col-lg-6 position-relative">
+              <div class="image-round"></div>
+              <div class="about-image p-4 pb-0">
+                <img
+                  src="images/home/avatar.png"
+                  alt=""
+                  height="500px"
+                  style="transform: translateX(-170px)"
+                  class=""
+                />
+              </div>
+            </div> -->
+
+            <div class="col-lg-12">
+              <div class="about-item p-5">
+                <h2 class="display-5 fw-semibold">About Me</h2>
+                <p class="text-muted fs-14">
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                  The point of using normal distribution of letters, as opposed
+                  to using 'Content here, content here', making it look like
+                  readable English..
+                </p>
+
+                <ul
+                  class="nav nav-pills mb-3 mt-4 pt-2"
+                  id="pills-tab"
+                  role="tablist"
+                >
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="pills-home-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-home"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-home"
+                      aria-selected="true"
+                    >
+                      Skills
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="pills-profile-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-profile"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-profile"
+                      aria-selected="false"
+                    >
+                      Experience
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="pills-contact-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-contact"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-contact"
+                      aria-selected="false"
+                    >
+                      Education
+                    </button>
+                  </li>
+                </ul>
+
+                <div class="tab-content" id="pills-tabContent">
+                  <!-- Skills Tab -->
+                  <div
+                    class="tab-pane fade show active"
+                    id="pills-home"
+                    role="tabpanel"
+                    aria-labelledby="pills-home-tab"
+                  >
+                    <div class="skill-item mt-4 pt-2">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div class="d-flex align-items-center">
+                          <i
+                            class="fab fa-react text-primary me-2 skill-icon"
+                          ></i>
+                          <h6 class="mb-0">React JS</h6>
+                        </div>
+                        <h6 class="mb-0">90%</h6>
+                      </div>
+                      <div class="progress" style="height: 5px">
+                        <div
+                          class="progress-bar bg-primary"
+                          role="progressbar"
+                          aria-valuenow="90"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          style="width: 90%"
+                        ></div>
+                      </div>
+                    </div>
+
+                    <div class="skill-item mt-4 pt-2">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div class="d-flex align-items-center">
+                          <i
+                            class="fab fa-js-square text-warning me-2 skill-icon"
+                          ></i>
+                          <h6 class="mb-0">JavaScript</h6>
+                        </div>
+                        <h6 class="mb-0">75%</h6>
+                      </div>
+                      <div class="progress" style="height: 5px">
+                        <div
+                          class="progress-bar bg-warning"
+                          role="progressbar"
+                          aria-valuenow="75"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          style="width: 75%"
+                        ></div>
+                      </div>
+                    </div>
+
+                    <div class="skill-item mt-4 pt-2">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div class="d-flex align-items-center">
+                          <i
+                            class="fab fa-css3-alt text-info me-2 skill-icon"
+                          ></i>
+                          <h6 class="mb-0">CSS3</h6>
+                        </div>
+                        <h6 class="mb-0">90%</h6>
+                      </div>
+                      <div class="progress" style="height: 5px">
+                        <div
+                          class="progress-bar bg-info"
+                          role="progressbar"
+                          aria-valuenow="90"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          style="width: 90%"
+                        ></div>
+                      </div>
+                    </div>
+
+                    <div class="skill-item mt-4 pt-2">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div class="d-flex align-items-center">
+                          <i
+                            class="fab fa-bootstrap text-purple me-2 skill-icon"
+                          ></i>
+                          <h6 class="mb-0">Bootstrap</h6>
+                        </div>
+                        <h6 class="mb-0">90%</h6>
+                      </div>
+                      <div class="progress" style="height: 5px">
+                        <div
+                          class="progress-bar bg-purple"
+                          role="progressbar"
+                          aria-valuenow="90"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          style="width: 90%"
+                        ></div>
+                      </div>
+                    </div>
+
+                    <div class="skill-item mt-4 pt-2">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div class="d-flex align-items-center">
+                          <i
+                            class="fab fa-node text-success me-2 skill-icon"
+                          ></i>
+                          <h6 class="mb-0">Node.js</h6>
+                        </div>
+                        <h6 class="mb-0">50%</h6>
+                      </div>
+                      <div class="progress" style="height: 5px">
+                        <div
+                          class="progress-bar bg-success"
+                          role="progressbar"
+                          aria-valuenow="50"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          style="width: 50%"
+                        ></div>
+                      </div>
+                    </div>
+
+                    <div class="skill-item mt-4 pt-2">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div class="d-flex align-items-center">
+                          <i
+                            class="fas fa-server text-danger me-2 skill-icon"
+                          ></i>
+                          <h6 class="mb-0">Express</h6>
+                        </div>
+                        <h6 class="mb-0">80%</h6>
+                      </div>
+                      <div class="progress" style="height: 5px">
+                        <div
+                          class="progress-bar bg-danger"
+                          role="progressbar"
+                          aria-valuenow="80"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          style="width: 80%"
+                        ></div>
+                      </div>
+                    </div>
+
+                    <div class="skill-item mt-4 pt-2">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div class="d-flex align-items-center">
+                          <i
+                            class="fas fa-database text-success me-2 skill-icon"
+                          ></i>
+                          <h6 class="mb-0">MongoDB</h6>
+                        </div>
+                        <h6 class="mb-0">90%</h6>
+                      </div>
+                      <div class="progress" style="height: 5px">
+                        <div
+                          class="progress-bar bg-success"
+                          role="progressbar"
+                          aria-valuenow="90"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          style="width: 90%"
+                        ></div>
+                      </div>
+                    </div>
+
+                    <div class="skill-item mt-4 pt-2">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div class="d-flex align-items-center">
+                          <i class="fas fa-gem text-danger me-2 skill-icon"></i>
+                          <h6 class="mb-0">Ruby on Rails</h6>
+                        </div>
+                        <h6 class="mb-0">70%</h6>
+                      </div>
+                      <div class="progress" style="height: 5px">
+                        <div
+                          class="progress-bar bg-danger"
+                          role="progressbar"
+                          aria-valuenow="70"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          style="width: 70%"
+                        ></div>
+                      </div>
+                    </div>
+
+                    <div class="skill-item mt-4 pt-2">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div class="d-flex align-items-center">
+                          <i
+                            class="fab fa-wordpress text-primary me-2 skill-icon"
+                          ></i>
+                          <h6 class="mb-0">WordPress</h6>
+                        </div>
+                        <h6 class="mb-0">70%</h6>
+                      </div>
+                      <div class="progress" style="height: 5px">
+                        <div
+                          class="progress-bar bg-primary"
+                          role="progressbar"
+                          aria-valuenow="70"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          style="width: 70%"
+                        ></div>
+                      </div>
+                    </div>
+
+                    <div class="skill-item mt-4 pt-2">
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <div class="d-flex align-items-center">
+                          <i
+                            class="fab fa-github text-dark me-2 skill-icon"
+                          ></i>
+                          <h6 class="mb-0">Git/GitHub</h6>
+                        </div>
+                        <h6 class="mb-0">85%</h6>
+                      </div>
+                      <div class="progress" style="height: 5px">
+                        <div
+                          class="progress-bar bg-dark"
+                          role="progressbar"
+                          aria-valuenow="85"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                          style="width: 85%"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Experience Tab -->
+                  <div
+                    class="tab-pane fade"
+                    id="pills-profile"
+                    role="tabpanel"
+                    aria-labelledby="pills-profile-tab"
+                  >
+                    <div class="experience">
+                      <!-- Current Role -->
+                      <div class="experience-item position-relative mb-4">
+                        <div class="d-flex">
+                          <div class="timeline-marker"></div>
+                          <div class="experience-content">
+                            <h5 class="company">BZSOFTECH</h5>
+                            <p class="position mb-2">
+                              Frontend & WordPress Developer
+                            </p>
+                            <p class="duration text-muted">
+                              March 2024 - Present
+                            </p>
+                            <p class="description text-muted">
+                              Developed and maintained responsive web
+                              applications using Bootstrap, CSS3, and
+                              JavaScript. Enhanced user experiences through
+                              dynamic interfaces built with React.js
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Previous Roles -->
+                      <div class="experience-item position-relative mb-4">
+                        <div class="d-flex">
+                          <div class="timeline-marker"></div>
+                          <div class="experience-content">
+                            <h5 class="company">PASSU SOLUTION</h5>
+                            <p class="position mb-2">Frontend Developer</p>
+                            <p class="duration text-muted">
+                              Nov 2023 - Feb 2024
+                            </p>
+                            <p class="description text-muted">
+                              Improved user experiences by creating dynamic
+                              interfaces with React.js. Consistently delivered
+                              modern, responsive designs with Tailwind CSS while
+                              successfully completing multiple projects
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="experience-item position-relative mb-4">
+                        <div class="d-flex">
+                          <div class="timeline-marker"></div>
+                          <div class="experience-content">
+                            <h5 class="company">PHANTOM E-SOLUTION</h5>
+                            <p class="position mb-2">Frontend Developer</p>
+                            <p class="duration text-muted">
+                              Feb 2023 - Sep 2023
+                            </p>
+                            <p class="description text-muted">
+                              Achieved consistent, modern, and responsive
+                              designs utilizing Tailwind CSS. Built dynamic
+                              interfaces with React.js.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Education Tab -->
+                  <div
+                    class="tab-pane fade"
+                    id="pills-contact"
+                    role="tabpanel"
+                    aria-labelledby="pills-contact-tab"
+                  >
+                    <!-- Education content remains the same -->
+                    <div class="experience">
+                      <div class="row position-relative">
+                        <div class="col-2">
+                          <div class="border-left"></div>
+                        </div>
+                        <div class="col-10">
+                          <div class="mt-4 pt-2">
+                            <h5>Basic Computer Application</h5>
+                            <p class="text-muted fs-15 mb-0">
+                              1996-1998 (3 year)
+                            </p>
+                            <p class="text-muted fs-15 mb-0">
+                              There are many variations of passages of Lorem
+                              Ipsum available.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row position-relative">
+                        <div class="col-2">
+                          <div class="border-left"></div>
+                        </div>
+                        <div class="col-10">
+                          <div class="mt-4 pt-2">
+                            <h5>Master Computer Application</h5>
+                            <p class="text-muted fs-15 mb-0">
+                              1999-2000 (2 year)
+                            </p>
+                            <p class="text-muted fs-15">
+                              The majority have suffered alteration in some
+                              form, by injmour, or randomised words which don't
+                              look even slightly believable.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end about-me -->
+
+    <!-- start service -->
+    <div class="container" id="service">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="text-center mb-5">
+            <h6 class="mb-0 text-muted fs-15">WHAT I OFFER</h6>
+            <h2>Affordable Services</h2>
+            <p class="para-width text-muted mb-0 fs-15">
+              Providing top-notch digital solutions tailored to your business
+              needs, ensuring high-quality performance and user satisfaction.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="info-item box-shadow mt-4 pt-2">
+            <div class="p-4">
+              <div class="research avatar-sm bg-soft-purple text-center">
+                <i class="mdi mdi-palette fs-24 text-purple"></i>
+              </div>
+              <h6 class="mt-4">UI/UX Design</h6>
+              <p class="text-muted fs-15">
+                Crafting intuitive and engaging user experiences with modern
+                design principles and trends.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="info-item box-shadow mt-4 pt-2">
+            <div class="p-4">
+              <div class="research avatar-sm bg-soft-danger text-center">
+                <i class="mdi mdi-laptop fs-24 text-danger"></i>
+              </div>
+              <h6 class="mt-4">Web Development</h6>
+              <p class="text-muted fs-15">
+                Building responsive and high-performance websites tailored to
+                meet your business objectives.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="info-item box-shadow mt-4 pt-2">
+            <div class="p-4">
+              <div class="research avatar-sm bg-soft-warning text-center">
+                <i class="mdi mdi-wordpress fs-24 text-warning"></i>
+              </div>
+              <h6 class="mt-4">WordPress Development</h6>
+              <p class="text-muted fs-15">
+                Custom WordPress themes and plugins to enhance your online
+                presence effectively.<br /><br />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="info-item box-shadow mt-4 pt-2">
+            <div class="p-4">
+              <div class="research avatar-sm bg-soft-blue text-center">
+                <i class="mdi mdi-api fs-24 text-blue"></i>
+              </div>
+              <h6 class="mt-4">RESTful API Development</h6>
+              <p class="text-muted fs-15">
+                Creating efficient and scalable APIs to integrate with various
+                applications seamlessly.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="info-item box-shadow mt-4 pt-2">
+            <div class="p-4">
+              <div class="research avatar-sm bg-soft-primary text-center">
+                <i class="mdi mdi-web fs-24 text-primary"></i>
+              </div>
+              <h6 class="mt-4">Frontend Development</h6>
+              <p class="text-muted fs-15">
+                Delivering interactive and visually appealing web applications
+                using modern frameworks.<br /><br />
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="info-item box-shadow mt-4 pt-2">
+            <div class="p-4">
+              <div class="research avatar-sm bg-soft-pink text-center">
+                <i class="mdi mdi-server fs-24 text-pink"></i>
+              </div>
+              <h6 class="mt-4">Backend Development</h6>
+              <p class="text-muted fs-15">
+                Developing robust and scalable backend systems to power dynamic
+                applications.<br /><br />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end service -->
+
+    <!-- start counter -->
+    <section class="section counter" id="counter">
+      <!-- start container -->
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="text-center mb-4">
+              <h6 class="mb-0 text-muted fs-15">Counter</h6>
+              <h2>Our Achievement</h2>
+              <p class="para-width text-muted mb-0 fs-15">
+                Showcasing our dedication and success through measurable
+                achievements and milestones.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- end row -->
+
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mt-4 pt-2">
+            <div class="counter-item">
+              <div class="counter-icon text-center">
+                <img src="images/counter/heart.png" alt="" class="img-fluid" />
+              </div>
+              <div class="counter-value text-center mt-3">
+                <h2
+                  class="counter fw-bold d-inline-block mb-0"
+                  data-target="100"
+                >
+                  0
+                </h2>
+                <span class="h2"> +</span>
+              </div>
+              <div class="text-center">
+                <p class="text-muted fw-semibold fs-15">Happy Clients</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 pt-2">
+            <div class="counter-item">
+              <div class="counter-icon text-center">
+                <img
+                  src="images/counter/blueprint.png"
+                  alt=""
+                  class="img-fluid"
+                />
+              </div>
+              <div class="counter-value text-center mt-3">
+                <h2
+                  class="counter fw-bold d-inline-block mb-0"
+                  data-target="12"
+                >
+                  0
+                </h2>
+              </div>
+              <div class="text-center">
+                <p class="text-muted fw-semibold fs-15">Projects Done</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 pt-2">
+            <div class="counter-item">
+              <div class="counter-icon text-center">
+                <img src="images/counter/star.png" alt="" class="img-fluid" />
+              </div>
+              <div class="counter-value text-center mt-3">
+                <h2
+                  class="counter fw-bold d-inline-block mb-0"
+                  data-target="100"
+                >
+                  0
+                </h2>
+                <span class="h2"> +</span>
+              </div>
+              <div class="text-center">
+                <p class="text-muted fw-semibold fs-15">Clients Review</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 pt-2">
+            <div class="counter-item">
+              <div class="counter-icon text-center">
+                <img src="images/counter/idea.png" alt="" class="img-fluid" />
+              </div>
+              <div class="counter-value text-center mt-3">
+                <h2 class="counter fw-bold d-inline-block mb-0" data-target="3">
+                  0
+                </h2>
+                <span class="h2"> +</span>
+              </div>
+              <div class="text-center">
+                <p class="text-muted fw-semibold fs-15">Years Experience</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- end container -->
+    </section>
+    <!-- end counter -->
+
+    <!-- start my-work -->
+    <section class="section my-work" id="work">
+      <!-- start container -->
+      <div class="container">
+        <div class="row">
+          <div class="d-flex align-items-center">
+            <div class="left-text">
+              <h2 class="mb-0">My Latest Work</h2>
+              <p class="fs-15 text-muted">
+                Perfect solution for digital experience
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- end row -->
+
+        <div class="row mt-5">
+          <div class="col-lg-12">
+            <div class="work-slider" id="work-slider">
+              <!-- Item 1 -->
+              <a href="https://akjcont.net/" target="_blank">
+                <div class="work-item">
+                  <div class="work-image position-relative overflow-hidden">
+                    <img
+                      src="images/Projects/aj.png"
+                      alt="Al-Jahromi Project"
+                      class="img-fluid w-100"
+                    />
+                    <div class="work-overlay">
+                      <div class="work-content">
+                        <h4 class="text-light mb-2">Al-Jahromi</h4>
+                        <p class="text-light mb-0">Wordpress</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- Item 2 -->
+              <a href="https://quickdoc.app/" target="_blank">
+                <div class="work-item">
+                  <div class="work-image position-relative overflow-hidden">
+                    <img
+                      src="images/Projects/qd.png"
+                      alt="QuickDoc Project"
+                      class="img-fluid w-100"
+                    />
+                    <div class="work-overlay">
+                      <div class="work-content">
+                        <h4 class="text-light mb-2">QuickDoc</h4>
+                        <p class="text-light mb-0">React App</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- Item 3 -->
+              <a href="https://www.clinicsuite.io/" target="_blank">
+                <div class="work-item">
+                  <div class="work-image position-relative overflow-hidden">
+                    <img
+                      src="images/Projects/cs.png"
+                      alt="Clinic Suite Project"
+                      class="img-fluid w-100"
+                    />
+                    <div class="work-overlay">
+                      <div class="work-content">
+                        <h4 class="text-light mb-2">Clinic Suite</h4>
+                        <p class="text-light mb-0">React App</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- Item 4 -->
+              <a href="https://graph-engine.vercel.app/" target="_blank">
+                <div class="work-item">
+                  <div class="work-image position-relative overflow-hidden">
+                    <img
+                      src="images/Projects/gf.png"
+                      alt="Graph-Engine Project"
+                      class="img-fluid w-100"
+                    />
+                    <div class="work-overlay">
+                      <div class="work-content">
+                        <h4 class="text-light mb-2">Graph-Engine</h4>
+                        <p class="text-light mb-0">React App</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- Item 5 -->
+              <a href="https://imdad-energy.vercel.app/" target="_blank">
+                <div class="work-item">
+                  <div class="work-image position-relative overflow-hidden">
+                    <img
+                      src="images/Projects/ie.png"
+                      alt="Graph-Engine Project"
+                      class="img-fluid w-100"
+                    />
+                    <div class="work-overlay">
+                      <div class="work-content">
+                        <h4 class="text-light mb-2">Imdad-Energy</h4>
+                        <p class="text-light mb-0">React App</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- Item 6 -->
+              <a href="https://juriph.com/" target="_blank">
+                <div class="work-item">
+                  <div class="work-image position-relative overflow-hidden">
+                    <img
+                      src="images/Projects/juriph.png"
+                      alt="Graph-Engine Project"
+                      class="img-fluid w-100"
+                    />
+                    <div class="work-overlay">
+                      <div class="work-content">
+                        <h4 class="text-light mb-2">Juriph</h4>
+                        <p class="text-light mb-0">React App</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- Item 7 -->
+              <a href="https://moja-solution.vercel.app/" target="_blank">
+                <div class="work-item">
+                  <div class="work-image position-relative overflow-hidden">
+                    <img
+                      src="images/Projects/moja.png"
+                      alt="Graph-Engine Project"
+                      class="img-fluid w-100"
+                    />
+                    <div class="work-overlay">
+                      <div class="work-content">
+                        <h4 class="text-light mb-2">Moja Solutions</h4>
+                        <p class="text-light mb-0">React App</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- Item 8 -->
+              <a href="https://www.bzsoftech.com/" target="_blank">
+                <div class="work-item">
+                  <div class="work-image position-relative overflow-hidden">
+                    <img
+                      src="images/Projects/pf.png"
+                      alt="Graph-Engine Project"
+                      class="img-fluid w-100"
+                    />
+                    <div class="work-overlay">
+                      <div class="work-content">
+                        <h4 class="text-light mb-2">Portfolio APP</h4>
+                        <p class="text-light mb-0">React App</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <!-- Item 9 -->
+              <a href="https://www.zatca.co/" target="_blank">
+                <div class="work-item">
+                  <div class="work-image position-relative overflow-hidden">
+                    <img
+                      src="images/Projects/zt.png"
+                      alt="Graph-Engine Project"
+                      class="img-fluid w-100"
+                    />
+                    <div class="work-overlay">
+                      <div class="work-content">
+                        <h4 class="text-light mb-2">Zatca APP</h4>
+                        <p class="text-light mb-0">React App</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Item 10 -->
+              <a href="https://itechtraders.com/" target="_blank">
+                <div class="work-item">
+                  <div class="work-image position-relative overflow-hidden">
+                    <img
+                      src="images/Projects/itech.png"
+                      alt="Graph-Engine Project"
+                      class="img-fluid w-100"
+                    />
+                    <div class="work-overlay">
+                      <div class="work-content">
+                        <h4 class="text-light mb-2">iTechTrades</h4>
+                        <p class="text-light mb-0">Wordpress</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end container -->
+    </section>
+    <!-- end my-work -->
+
+    <!-- start testimonial -->
+    <section class="section testimonial" id="testi">
+      <div class="shape-1">
+        <img src="images/testi/shape.png" alt="" class="img-fluid" />
+      </div>
+      <!-- start container -->
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="text-center mb-5">
+              <h6 class="mb-0 text-muted fs-15 text-uppercase">Testimonial</h6>
+              <h2>People talk about us</h2>
+              <p class="para-width text-muted mb-0 fs-15">
+                A Private Limited is the most popular type of partnership Malta.
+                The limited liability is, in fact, the only type of company
+                allowed by Companies.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider main container -->
+        <div class="swiper-container py-5">
+          <div class="swiper-wrapper pt-3">
+            <!-- start slider -->
+            <div class="swiper-slide border-radius position-relative">
+              <div class="user-image">
+                <img
+                  src="images/team/img1.png"
+                  alt=""
+                  class="avatar-md rounded-circle"
+                />
+              </div>
+              <div class="text-center mt-4">
+                <p class="f-16 text-muted fs-15">
+                  " We use a customized application specifically designed a
+                  testing gnose to keep away for people. "
+                </p>
+              </div>
+              <hr />
+              <div class="user-info text-center">
+                <div class="user-info">
+                  <h5 class="text-black mb-0">Janice C. Campbe</h5>
+                  <p class="mb-0 text-muted fs-14">Embedded analytics</p>
+                </div>
+              </div>
+            </div>
+            <!-- end slider -->
+
+            <!-- start slider -->
+            <div class="swiper-slide border-radius position-relative">
+              <div class="user-image">
+                <img
+                  src="images/team/img2.png"
+                  alt=""
+                  class="avatar-md rounded-circle"
+                />
+              </div>
+              <div class="text-center mt-4">
+                <p class="f-16 text-muted fs-15">
+                  " We use a customized application specifically designed a
+                  testing gnose to keep away for people. "
+                </p>
+              </div>
+              <hr />
+              <div class="user-info text-center">
+                <div class="user-info">
+                  <h5 class="text-black mb-0">Janice C. Campbe</h5>
+                  <p class="mb-0 text-muted fs-14">Embedded analytics</p>
+                </div>
+              </div>
+            </div>
+            <!-- end slider -->
+
+            <!-- start slider -->
+            <div class="swiper-slide border-radius position-relative">
+              <div class="user-image">
+                <img
+                  src="images/team/img3.png"
+                  alt=""
+                  class="avatar-md rounded-circle"
+                />
+              </div>
+              <div class="text-center mt-4">
+                <p class="f-16 text-muted fs-15">
+                  " We use a customized application specifically designed a
+                  testing gnose to keep away for people. "
+                </p>
+              </div>
+              <hr />
+              <div class="user-info text-center">
+                <div class="user-info">
+                  <h5 class="text-black mb-0">Janice C. Campbe</h5>
+                  <p class="mb-0 text-muted fs-14">Embedded analytics</p>
+                </div>
+              </div>
+            </div>
+            <!-- end slider -->
+
+            <!-- start slider -->
+            <div class="swiper-slide border-radius position-relative">
+              <div class="user-image">
+                <img
+                  src="images/team/img4.png"
+                  alt=""
+                  class="avatar-md rounded-circle"
+                />
+              </div>
+              <div class="text-center mt-4">
+                <p class="f-16 text-muted fs-15">
+                  " We use a customized application specifically designed a
+                  testing gnose to keep away for people. "
+                </p>
+              </div>
+              <hr />
+              <div class="user-info text-center">
+                <div class="user-info">
+                  <h5 class="text-black mb-0">Janice C. Campbe</h5>
+                  <p class="mb-0 text-muted fs-14">Embedded analytics</p>
+                </div>
+              </div>
+            </div>
+            <!-- end slider -->
+
+            <!-- start slider -->
+            <div class="swiper-slide border-radius position-relative">
+              <div class="user-image">
+                <img
+                  src="images/team/img5.png"
+                  alt=""
+                  class="avatar-md rounded-circle"
+                />
+              </div>
+              <div class="text-center mt-4">
+                <p class="f-16 text-muted fs-15">
+                  " We use a customized application specifically designed a
+                  testing gnose to keep away for people. "
+                </p>
+              </div>
+              <hr />
+              <div class="user-info text-center">
+                <div class="user-info">
+                  <h5 class="text-black mb-0">Janice C. Campbe</h5>
+                  <p class="mb-0 text-muted fs-14">Embedded analytics</p>
+                </div>
+              </div>
+            </div>
+            <!-- end slider -->
+          </div>
+
+          <!-- navigation buttons -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <div class="shape-2">
+        <img src="images/testi/shape-2.png" alt="" class="img-fluid" />
+      </div>
+
+      <div class="shape-3">
+        <img src="images/testi/shape-3.png" alt="" class="img-fluid" />
+      </div>
+      <!-- end container -->
+    </section>
+    <!-- end testimonial -->
+
+    <!-- start blog -->
+    <section class="section blog" id="blog">
+      <!-- start container -->
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="text-center mb-4">
+              <h6 class="mb-0 text-muted fs-15">Blog</h6>
+              <h2>Our Regular News</h2>
+              <p class="para-width text-muted mb-0 fs-15">
+                A Private Limited is the most popular type of partnership Malta.
+                The limited liability is, in fact, the only type of company
+                allowed by Companies.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- end row -->
+
+        <div class="row">
+          <div class="col-lg-4 mt-4 pt-2">
+            <div class="blog-item p-4 box-shadow">
+              <div class="blog-image">
+                <img src="images/blog/img-1.png" alt="" class="img-fluid" />
+                <div class="blog-image-icon bg-blue">
+                  <i class="mdi mdi-lan fs-24"></i>
+                </div>
+              </div>
+              <div class="blog-content mt-5">
+                <!-- <p class="text-muted fw-semibold mb-2">May 25, 2021</p> -->
+                <a href="#"
+                  ><h5>We makes UI/UX design very easy for you.</h5></a
+                >
+                <p class="fs-15 text-muted">
+                  He nicked it tickety boo harry the cras bargy chap mush
+                  spiffing spend a penny.
+                </p>
+                <a href="#" class="text-dark fw-semibold"
+                  >Learn more <i class="mdi mdi-arrow-right fs-16"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 pt-2">
+            <div class="blog-item p-4 box-shadow">
+              <div class="blog-image">
+                <img src="images/blog/img-2.png" alt="" class="img-fluid" />
+                <div class="blog-image-icon bg-secondary">
+                  <i class="mdi mdi-responsive fs-24"></i>
+                </div>
+              </div>
+              <div class="blog-content mt-5">
+                <!-- <p class="text-muted fw-semibold mb-2">May 25, 2021</p> -->
+                <a href="#"
+                  ><h5>Current world design trends know easily.</h5></a
+                >
+                <p class="fs-15 text-muted">
+                  He nicked it tickety boo harry the cras bargy chap mush
+                  spiffing spend a penny.
+                </p>
+                <a href="#" class="text-dark fw-semibold"
+                  >Learn more <i class="mdi mdi-arrow-right fs-16"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 pt-2">
+            <div class="blog-item p-4 box-shadow">
+              <div class="blog-image">
+                <img src="images/blog/img-3.png" alt="" class="img-fluid" />
+                <div class="blog-image-icon bg-primary">
+                  <i class="mdi mdi-vector-combine fs-24"></i>
+                </div>
+              </div>
+              <div class="blog-content mt-5">
+                <!-- <p class="text-muted fw-semibold mb-2">May 25, 2021</p> -->
+                <a href="#"
+                  ><h5>We calculate clients demand for research.</h5></a
+                >
+                <p class="fs-15 text-muted">
+                  He nicked it tickety boo harry the cras bargy chap mush
+                  spiffing spend a penny.
+                </p>
+                <a href="#" class="text-dark fw-semibold"
+                  >Learn more <i class="mdi mdi-arrow-right fs-16"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end container -->
+    </section>
+    <!-- end blog -->
+
+    <!-- start contact -->
+    <section class="contact pt-5 pb-0" id="contact">
+      <!-- start container -->
+      <div class="container">
+        <div class="shape-1">
+          <img src="images/testi/shape.png" alt="" class="img-fluid" />
+        </div>
+
+        <div class="contact-item">
+          <div class="row align-items-center">
+            <div class="col-lg-5">
+              <div class="contact-info">
+                <div class="mb-4">
+                  <h3>Let's Connect</h3>
+                  <p class="text-muted mb-0">
+                    Looking for help? Fill the form and start a new adventure.
+                  </p>
+                </div>
+
+                <hr />
+
+                <div class="info-content mt-4">
+                  <h6>Address :</h6>
+                  <div class="d-flex">
+                    <div class="icon">
+                      <i class="mdi mdi-home-outline fs-24 text-primary"></i>
+                    </div>
+                    <div class="icon-content ms-3">
+                      <p class="mb-0 fs-15">
+                        House B-44 Flower House Public School Tariq Road Cant,<br />
+                        Multan
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="info-content mt-4 pt-2">
+                  <h6>Phone :</h6>
+                  <div class="d-flex">
+                    <div class="icon">
+                      <i class="mdi mdi-phone-outline fs-24 text-primary"></i>
+                    </div>
+                    <div class="icon-content ms-3">
+                      <p class="mb-0 fs-15">(+92) 304 2626 916</p>
+                      <p class="mb-0 fs-15">(+92) 322 4597 3697</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="info-content mt-4 pt-2">
+                  <h6>Emails :</h6>
+                  <div class="d-flex">
+                    <div class="icon">
+                      <i class="mdi mdi-email-outline fs-24 text-primary"></i>
+                    </div>
+                    <div class="icon-content ms-3">
+                      <p class="mb-0 fs-15">aftabahmadkhan.dev@gmail.com</p>
+                      <p class="mb-0 fs-15">aftabahmad8704@gmail.com</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="custom-form mt-4">
+                <form
+                  method="post"
+                  name="myForm"
+                  onsubmit="return validateForm()"
+                >
+                  <h6 class="mb-0 text-muted">Let's talk</h6>
+                  <h3>Enter your project details</h3>
+                  <p class="fs-15 text-muted">
+                    Content here, content here', making it look like readable
+                    English. Many desktop publishing packages.
+                  </p>
+                  <p id="error-msg" style="opacity: 1">
+                    <!-- <div class="alert alert-warning">*Please enter a Name*</div> -->
+                  </p>
+
+                  <div id="simple-msg"></div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <input
+                          name="name"
+                          id="name"
+                          type="text"
+                          class="form-control contact-form"
+                          placeholder="Your name"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <input
+                          name="email"
+                          id="email"
+                          type="email"
+                          class="form-control contact-form"
+                          placeholder="Your email"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="form-group mt-2">
+                        <input
+                          type="text"
+                          class="form-control contact-form"
+                          id="subject"
+                          placeholder="Your Subject.."
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="form-group mt-2">
+                        <textarea
+                          name="comments"
+                          id="comments"
+                          rows="4"
+                          class="form-control contact-form h-auto"
+                          placeholder="Your message..."
+                        ></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row my-2">
+                    <div class="col-lg-12 d-grid">
+                      <input
+                        type="submit"
+                        id="submit"
+                        name="send"
+                        class="submitBnt btn btn-rounded btn-primary"
+                        value="Send Message"
+                      />
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="shape-2">
+          <img src="images/testi/shape-2.png" alt="" class="img-fluid" />
+        </div>
+
+        <div class="shape-3">
+          <img src="images/testi/shape-3.png" alt="" class="img-fluid" />
+        </div>
+      </div>
+      <!-- end container -->
+    </section>
+    <!-- end contact -->
+
+    <!-- start footer -->
+    <section class="footer">
+      <!-- start container -->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="mt-5">
+              <a class="logo text-uppercase" href="index.html">
+                <svg id="logo-70" width="78" height="30" viewBox="0 0 78 30" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M18.5147 0C15.4686 0 12.5473 1.21005 10.3934 3.36396L3.36396 10.3934C1.21005 12.5473 0 15.4686 0 18.5147C0 24.8579 5.14214 30 11.4853 30C14.5314 30 17.4527 28.7899 19.6066 26.636L24.4689 21.7737C24.469 21.7738 24.4689 21.7736 24.4689 21.7737L38.636 7.6066C39.6647 6.57791 41.0599 6 42.5147 6C44.9503 6 47.0152 7.58741 47.7311 9.78407L52.2022 5.31296C50.1625 2.11834 46.586 0 42.5147 0C39.4686 0 36.5473 1.21005 34.3934 3.36396L15.364 22.3934C14.3353 23.4221 12.9401 24 11.4853 24C8.45584 24 6 21.5442 6 18.5147C6 17.0599 6.57791 15.6647 7.6066 14.636L14.636 7.6066C15.6647 6.57791 17.0599 6 18.5147 6C20.9504 6 23.0152 7.58748 23.7311 9.78421L28.2023 5.31307C26.1626 2.1184 22.5861 0 18.5147 0Z" class="ccustom" fill="white"></path> <path d="M39.364 22.3934C38.3353 23.4221 36.9401 24 35.4853 24C33.05 24 30.9853 22.413 30.2692 20.2167L25.7982 24.6877C27.838 27.8819 31.4143 30 35.4853 30C38.5314 30 41.4527 28.7899 43.6066 26.636L62.636 7.6066C63.6647 6.57791 65.0599 6 66.5147 6C69.5442 6 72 8.45584 72 11.4853C72 12.9401 71.4221 14.3353 70.3934 15.364L63.364 22.3934C62.3353 23.4221 60.9401 24 59.4853 24C57.0498 24 54.985 22.4127 54.269 20.2162L49.798 24.6873C51.8377 27.8818 55.4141 30 59.4853 30C62.5314 30 65.4527 28.7899 67.6066 26.636L74.636 19.6066C76.7899 17.4527 78 14.5314 78 11.4853C78 5.14214 72.8579 0 66.5147 0C63.4686 0 60.5473 1.21005 58.3934 3.36396L39.364 22.3934Z" class="ccustom" fill="white"></path> </svg>
+                <!-- <img src="images/logo-light.png" class="logo-dark" alt="" height="28"> -->
+              </a>
+              <p class="fs-15 text-white-50 mt-4">
+                A Private Limited is the most popular type of partnership Malta.
+                The limited liability is, in fact, the only type of company
+                allowed by Companies.
+              </p>
+
+              <div class="icon-item mt-4">
+                <div class="d-flex">
+                  <a href="https://www.facebook.com/share/18niSVdmrB/">
+                    <div class="social-icon facebook avatar-xs">
+                      <i class="mdi mdi-facebook"></i>
+                    </div>
+                  </a>
+                  <a  href="https://www.instagram.com/im_unchosen/profilecard/?igsh=eXk0dmVmeDM0dHp5">
+                    <div class="social-icon instagram avatar-xs">
+                      <i class="mdi mdi-instagram"></i>
+                    </div>
+                  </a>
+                  <a href="www.linkedin.com/in/aftab-ahmad-b381a1293">
+                    <div class="social-icon linkedin avatar-xs">
+                      <i class="mdi mdi-linkedin"></i>
+                    </div>
+                  </a>
+                  <a href="https://github.com/aftab-khan-dev/">
+                    <div class="social-icon github avatar-xs">
+                      <i class="mdi mdi-github"></i>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 mt-4">
+            <h5 class="text-white">Usefull Links</h5>
+
+            <ul class="footer-text list-unstyled mt-4">
+              <li>
+                <a href="#work"
+                  ><i class="mdi mdi-arrow-right me-2"></i>Work</a
+                >
+              </li>
+              <li>
+                <a href="#service"><i class="mdi mdi-arrow-right me-2"></i>Services</a>
+              </li>
+              
+              <li>
+                <a href="#contact"><i class="mdi mdi-arrow-right me-2"></i>Contact</a>
+              </li>
+              <li>
+                <a href="#aboutme"><i class="mdi mdi-arrow-right me-2"></i>About Me</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 mt-4">
+            <h5 class="text-white">Linkedin</h5>
+            <div class="row">
+              <div class="col-lg-10">
+                <div class="linkedin-box mt-4">
+                  <p class="mb-0 text-white-50 fs-15 mb-2">
+                    The full monty spiffing good time .
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="linkedin-content d-flex align-items-center">
+              <div class="icon">
+                <i class="mdi mdi-linkedin text-white fs-40"></i>
+              </div>
+              <div class="icon-content ms-2">
+                <a href="www.linkedin.com/in/aftab-ahmad-b381a1293" class="text-white-50">Linkedin</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4">
+            <h5 class="text-white">Sign up</h5>
+            <p class="mb-0 text-white-50 mt-4">
+              Follow our newsletter to stay updated about agency.
+            </p>
+            <div class="input-group my-3">
+              <input
+                type="text"
+                class="form-control p-3"
+                placeholder="subscribe"
+                aria-label="subscribe"
+                aria-describedby="basic-addon2"
+              />
+              <a
+                class="input-group-text bg-primary text-white px-4"
+                id="basic-addon2"
+                >Go</a
+              >
+            </div>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <!-- end container -->
+    </section>
+
+    <section class="bottom-footer py-4">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <p class="mb-0 text-center text-muted">
+              ©
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+               Design  </i> by
+              <a
+                class="text-muted"
+                >Aftab Ahmad Khan</
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end footer -->
+
+    <!--Bootstrap Js-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Slider Js -->
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/swiper.min.js"></script>
+
+    <!-- conter -->
+    <script src="js/counter.init.js"></script>
+
+    <!-- App Js -->
+    <script src="js/app.js"></script>
+  </body>
+
+  <!-- JavaScript for Counter Animation -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const counters = document.querySelectorAll(".counter");
+
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const target = +entry.target.getAttribute("data-target");
+              let count = 0;
+              const speed = Math.ceil(target / 10); // Adjust speed
+
+              const updateCounter = () => {
+                if (count < target) {
+                  count += speed;
+                  if (count > target) count = target;
+                  entry.target.innerText = count;
+                  requestAnimationFrame(updateCounter);
+                }
+              };
+
+              updateCounter();
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.5 } // Trigger when 50% visible
+      );
+
+      counters.forEach((counter) => observer.observe(counter));
+    });
+    document.getElementById("darkModeToggle").addEventListener("click", function() {
+  document.body.classList.toggle("dark-mode");
+
+  let serviceSection = document.getElementById("services");
+  serviceSection.classList.toggle("dark-mode");
+
+  console.log("Dark mode toggled on #service", serviceSection.classList);
+});
+document.addEventListener("DOMContentLoaded", function () {
+  emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+
+  document.getElementById("submit").addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent form submission
+
+    // Collect form data
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let subject = document.getElementById("subject").value;
+    let message = document.getElementById("comments").value;
+
+    if (!name || !email || !subject || !message) {
+      document.getElementById("error-msg").innerHTML =
+        '<div class="alert alert-warning">All fields are required</div>';
+      return;
+    }
+
+    // Prepare email parameters
+    let templateParams = {
+      from_name: name,
+      from_email: email,
+      subject: subject,
+      message: message,
+    };
+
+    // Send email using EmailJS
+    emailjs
+      .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
+      .then(
+        function (response) {
+          console.log("Email sent successfully:", response);
+          document.getElementById("simple-msg").innerHTML =
+            '<div class="alert alert-success">Message Sent Successfully!</div>';
+          document.forms["myForm"].reset(); // Reset form
+        },
+        function (error) {
+          console.log("Error sending email:", error);
+          document.getElementById("simple-msg").innerHTML =
+            '<div class="alert alert-danger">Error sending message.</div>';
+        }
+      );
+  });
+});
+
+
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+</html>
